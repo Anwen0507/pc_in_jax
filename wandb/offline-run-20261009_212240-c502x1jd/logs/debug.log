@@ -1,0 +1,35 @@
+2026-10-09 21:22:40,617 INFO    MainThread:990 [wandb_setup.py:_flush():76] Current SDK version is 0.15.10
+2026-10-09 21:22:40,617 INFO    MainThread:990 [wandb_setup.py:_flush():76] Configure stats pid to 990
+2026-10-09 21:22:40,617 INFO    MainThread:990 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_setup.py:_flush():76] Loading settings from /notebooks/wandb/settings
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_init.py:_log_setup():524] Logging user logs to ./wandb/offline-run-20261009_212240-c502x1jd/logs/debug.log
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_init.py:_log_setup():525] Logging internal logs to ./wandb/offline-run-20261009_212240-c502x1jd/logs/debug-internal.log
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_init.py:_jupyter_setup():470] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f9b04097ed0>
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_init.py:init():564] calling init triggers
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {'seed': 42, 'input_dim': 784, 'output_dim': 10, 'hidden_size': 300, 'n_layers': 3, 'activation': 'tanh', 'activity_lr': 0.1, 'inference_steps': 1, 'param_lr': 0.001, 'batch_size': 64, 'test_every': 2, 'n_train_iters': 2, 'activity_optimizer': 'sgd', 'sweep_parameter': 'smoke'}
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_init.py:init():614] starting backend
+2026-10-09 21:22:40,618 INFO    MainThread:990 [wandb_init.py:init():618] setting up manager
+2026-10-09 21:22:40,620 INFO    MainThread:990 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2026-10-09 21:22:40,621 INFO    MainThread:990 [wandb_init.py:init():624] backend started and connected
+2026-10-09 21:22:40,639 INFO    MainThread:990 [wandb_run.py:_label_probe_notebook():1276] probe notebook
+2026-10-09 21:22:40,642 INFO    MainThread:990 [wandb_init.py:init():715] updated telemetry
+2026-10-09 21:22:40,686 INFO    MainThread:990 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2026-10-09 21:22:40,693 INFO    MainThread:990 [wandb_init.py:init():799] starting run threads in backend
+2026-10-09 21:22:40,782 INFO    MainThread:990 [wandb_run.py:_console_start():2199] atexit reg
+2026-10-09 21:22:40,782 INFO    MainThread:990 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2026-10-09 21:22:40,782 INFO    MainThread:990 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2026-10-09 21:22:40,782 INFO    MainThread:990 [wandb_run.py:_redirect():2144] Redirects installed.
+2026-10-09 21:22:40,783 INFO    MainThread:990 [wandb_init.py:init():840] run started, returning control to user process
+2026-10-09 21:22:45,747 INFO    MainThread:990 [wandb_run.py:_finish():1934] finishing run pc-in-jax-task4/c502x1jd
+2026-10-09 21:22:45,748 INFO    MainThread:990 [jupyter.py:save_history():445] not saving jupyter history
+2026-10-09 21:22:45,748 INFO    MainThread:990 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2026-10-09 21:22:45,748 INFO    MainThread:990 [wandb_init.py:_jupyter_teardown():452] cleaning up jupyter logic
+2026-10-09 21:22:45,748 INFO    MainThread:990 [wandb_run.py:_atexit_cleanup():2168] got exitcode: 0
+2026-10-09 21:22:45,748 INFO    MainThread:990 [wandb_run.py:_restore():2151] restore
+2026-10-09 21:22:45,748 INFO    MainThread:990 [wandb_run.py:_restore():2157] restore done
+2026-10-09 21:22:46,764 INFO    MainThread:990 [wandb_run.py:_footer_history_summary_info():3557] rendering history
+2026-10-09 21:22:46,765 INFO    MainThread:990 [wandb_run.py:_footer_history_summary_info():3589] rendering summary

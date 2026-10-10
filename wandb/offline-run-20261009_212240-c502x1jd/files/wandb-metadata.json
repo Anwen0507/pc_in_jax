@@ -1,0 +1,49 @@
+{
+    "os": "Linux-5.19.0-45-generic-x86_64-with-glibc2.35",
+    "python": "3.11.7",
+    "heartbeatAt": "2026-10-09T21:22:40.758082",
+    "startedAt": "2026-10-09T21:22:40.551202",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "pc_in_jax.ipynb",
+    "codePathLocal": null,
+    "root": "/notebooks",
+    "git": {
+        "remote": "https://github.com/gradient-ai/PyTorch.git",
+        "commit": "d0ecbf76aac3ae9a65bc12d8ef8dbbf7ff5ecef7"
+    },
+    "email": null,
+    "host": "npd4ej5n37",
+    "username": "root",
+    "executable": "/usr/local/bin/python3",
+    "cpu_count": 2,
+    "cpu_count_logical": 2,
+    "cpu_freq": {
+        "current": 2900.281,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2900.281,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2900.281,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 244.23077011108398,
+            "used": 105.14935684204102
+        }
+    },
+    "memory": {
+        "total": 3.81207275390625
+    }
+}
