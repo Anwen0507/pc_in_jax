@@ -1,0 +1,7 @@
+[run]
+branch = True
+data_file = ${PC_IN_JAX_TASK45_RESULTS}/.coverage
+
+[report]
+precision = 2
+show_missing = True
