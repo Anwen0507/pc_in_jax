@@ -1,0 +1,776 @@
+.................................................E..........................F.............E...........................FFFFFFFFFFFFFFF.................. [ 86%]
+.............E......F.F
+ERROR: Coverage failure: total of 99.58 is less than fail-under=100.00
+                                                                                                                                                        [100%]
+=========================================================================== ERRORS ============================================================================
+______________________________________________ ERROR at setup of test_train_rejects_unknown_activity_optimizer[] ______________________________________________
+
+    @pytest.fixture
+    def notebook():
+>       return load_namespace()
+               ^^^^^^^^^^^^^^^^
+
+/notebooks/tests/test_pc_in_jax_task45.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/notebooks/tests/task45_test_support.py:77: in load_namespace
+    namespace = load_support()
+            ^^^^^^^^^^^^^^^^
+/notebooks/tests/notebook_test_support.py:25: in notebook_cells
+    return json.loads(NOTEBOOK.read_text())["cells"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.11/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.11/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <json.decoder.JSONDecoder object at 0x7fcd0cef1a90>, s = '', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/usr/lib/python3.11/json/decoder.py:355: JSONDecodeError
+_______________________________ ERROR at setup of test_wandb_run_arguments_metrics_summary_and_context_exit[activity_lr-True-2] _______________________________
+
+    @pytest.fixture
+    def notebook():
+>       return load_namespace()
+               ^^^^^^^^^^^^^^^^
+
+/notebooks/tests/test_pc_in_jax_task45.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/notebooks/tests/task45_test_support.py:87: in load_namespace
+    execute_cell(index, namespace)
+/notebooks/tests/task45_test_support.py:52: in execute_cell
+    ???
+/notebooks/tests/notebook_test_support.py:25: in notebook_cells
+    return json.loads(NOTEBOOK.read_text())["cells"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.11/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.11/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <json.decoder.JSONDecoder object at 0x7fcd0cef1a90>, s = '', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/usr/lib/python3.11/json/decoder.py:355: JSONDecodeError
+___________________________________ ERROR at setup of test_real_experiments_are_reproducible_and_log_final_iteration[0-sgd] ___________________________________
+
+    @pytest.fixture
+    def notebook():
+>       return load_namespace()
+               ^^^^^^^^^^^^^^^^
+
+/notebooks/tests/test_pc_in_jax_task45.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/notebooks/tests/task45_test_support.py:87: in load_namespace
+    execute_cell(index, namespace)
+/notebooks/tests/task45_test_support.py:51: in execute_cell
+    ???
+/notebooks/tests/task45_test_support.py:40: in extract_cells
+    path = TASK_SOURCES / f"task_{task}_cell_{index}.py"
+                             ^^^^^^^^^^^^^^^^
+/notebooks/tests/notebook_test_support.py:25: in notebook_cells
+    return json.loads(NOTEBOOK.read_text())["cells"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.11/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.11/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <json.decoder.JSONDecoder object at 0x7fcd0cef1a90>, s = '', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/usr/lib/python3.11/json/decoder.py:355: JSONDecodeError
+========================================================================== FAILURES ===========================================================================
+____________________________________________________ test_empty_training_loader_raises_instead_of_hanging _____________________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+
+    def test_empty_training_loader_raises_instead_of_hanging(notebook):
+        # Check in a bounded subprocess before risking an infinite loop here.
+        script = """
+    import ast, json
+    from pathlib import Path
+    nb = json.loads(Path(sys_notebook).read_text())
+    for cell in nb['cells']:
+        if cell['cell_type'] == 'code' and 'def infinite_loader(' in ''.join(cell['source']):
+            tree = ast.parse(''.join(cell['source']))
+            tree.body = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'infinite_loader']
+            ns = {}
+            exec(compile(tree, '<notebook-empty-loader>', 'exec'), ns)
+            try:
+                next(ns['infinite_loader']([]))
+            except ValueError:
+                raise SystemExit(0)
+            raise SystemExit(1)
+    """
+        script = "sys_notebook = " + repr(str(NOTEBOOK)) + "\n" + script
+        try:
+>           completed = subprocess.run([sys.executable, "-c", script], timeout=2,
+                                       capture_output=True, text=True)
+
+/notebooks/tests/test_pc_in_jax_task45.py:404: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+/usr/lib/python3.11/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.11/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.11/subprocess.py:2109: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Popen: returncode: -9 args: ['/tmp/pc-in-jax-tests-venv/bin/python', '-c', ...>, endtime = 169623.626174043, orig_timeout = 2, stdout_seq = []
+stderr_seq = [b'pytest-cov: Failed to setup subprocess coverage. Environ: {\'COV_CORE_SOURCE\': \'/notebooks/test-results/pc_in_jax...ask45/.coverage\', \'COV_CORE_BRANCH\': \'enabled\'} Exception: ModuleNotFoundError("No module named \'pygments\'")\n']
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['/tmp/pc-in-jax-tests-venv/bin/python', '-c', "sys_notebook = '/notebooks/pc_in_jax.ipynb'\n\nimport ast, json\nfrom pathlib import Path\nnb = json.loads(Path(sys_notebook).read_text())\nfor cell in nb['cells']:\n    if cell['cell_type'] == 'code' and 'def infinite_loader(' in ''.join(cell['source']):\n        tree = ast.parse(''.join(cell['source']))\n        tree.body = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'infinite_loader']\n        ns = {}\n        exec(compile(tree, '<notebook-empty-loader>', 'exec'), ns)\n        try:\n            next(ns['infinite_loader']([]))\n        except ValueError:\n            raise SystemExit(0)\n        raise SystemExit(1)\n"]' timed out after 2 seconds
+
+/usr/lib/python3.11/subprocess.py:1253: TimeoutExpired
+
+During handling of the above exception, another exception occurred:
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+
+    def test_empty_training_loader_raises_instead_of_hanging(notebook):
+        # Check in a bounded subprocess before risking an infinite loop here.
+        script = """
+    import ast, json
+    from pathlib import Path
+    nb = json.loads(Path(sys_notebook).read_text())
+    for cell in nb['cells']:
+        if cell['cell_type'] == 'code' and 'def infinite_loader(' in ''.join(cell['source']):
+            tree = ast.parse(''.join(cell['source']))
+            tree.body = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'infinite_loader']
+            ns = {}
+            exec(compile(tree, '<notebook-empty-loader>', 'exec'), ns)
+            try:
+                next(ns['infinite_loader']([]))
+            except ValueError:
+                raise SystemExit(0)
+            raise SystemExit(1)
+    """
+        script = "sys_notebook = " + repr(str(NOTEBOOK)) + "\n" + script
+        try:
+            completed = subprocess.run([sys.executable, "-c", script], timeout=2,
+                                       capture_output=True, text=True)
+        except subprocess.TimeoutExpired:
+>           pytest.fail("infinite_loader([]) hangs forever instead of rejecting an empty training loader")
+E           Failed: infinite_loader([]) hangs forever instead of rejecting an empty training loader
+
+/notebooks/tests/test_pc_in_jax_task45.py:407: Failed
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214545-93782c
+_________________________________________ test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates0] __________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+invalid_updates = {'value': 999}
+
+        else:
+            result = notebook["fetch_task4_results"]()
+            assert len(result) == 10 * len(seeds)
+            assert "Missing or failed" not in capsys.readouterr().out
+    
+    
+    @pytest.mark.parametrize("invalid_updates", [
+        {"value": 999}, {"seed": 999}, {"activity_lr": 0.5},
+        {"hidden_size": 50}, {"activity_optimizer": "adam"}, {"n_train_iters": 2},
+    ])
+    def test_api_excludes_runs_outside_the_controlled_comparison(notebook, invalid_updates):
+>       valid = api_run(notebook, value=1, run_id="correct-baseline")
+E       AssertionError: assert ['correct-bas...g-comparison'] == ['correct-baseline']
+E         
+E         Left contains one more item: 'wrong-comparison'
+E         Use -v to get more diff
+
+/notebooks/tests/test_pc_in_jax_task45.py:632: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214616-25993f
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 5, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+_________________________________________ test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates1] __________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+invalid_updates = {'seed': 999}
+
+        else:
+            result = notebook["fetch_task4_results"]()
+            assert len(result) == 10 * len(seeds)
+            assert "Missing or failed" not in capsys.readouterr().out
+    
+    
+    @pytest.mark.parametrize("invalid_updates", [
+        {"value": 999}, {"seed": 999}, {"activity_lr": 0.5},
+        {"hidden_size": 50}, {"activity_optimizer": "adam"}, {"n_train_iters": 2},
+    ])
+    def test_api_excludes_runs_outside_the_controlled_comparison(notebook, invalid_updates):
+>       valid = api_run(notebook, value=1, run_id="correct-baseline")
+E       AssertionError: assert ['correct-bas...g-comparison'] == ['correct-baseline']
+E         
+E         Left contains one more item: 'wrong-comparison'
+E         Use -v to get more diff
+
+/notebooks/tests/test_pc_in_jax_task45.py:632: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214617-562410
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 5, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+_________________________________________ test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates2] __________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+invalid_updates = {'activity_lr': 0.5}
+
+        else:
+            result = notebook["fetch_task4_results"]()
+            assert len(result) == 10 * len(seeds)
+            assert "Missing or failed" not in capsys.readouterr().out
+    
+    
+    @pytest.mark.parametrize("invalid_updates", [
+        {"value": 999}, {"seed": 999}, {"activity_lr": 0.5},
+        {"hidden_size": 50}, {"activity_optimizer": "adam"}, {"n_train_iters": 2},
+    ])
+    def test_api_excludes_runs_outside_the_controlled_comparison(notebook, invalid_updates):
+>       valid = api_run(notebook, value=1, run_id="correct-baseline")
+E       AssertionError: assert ['correct-bas...g-comparison'] == ['correct-baseline']
+E         
+E         Left contains one more item: 'wrong-comparison'
+E         Use -v to get more diff
+
+/notebooks/tests/test_pc_in_jax_task45.py:632: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214618-e555c6
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+_________________________________________ test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates3] __________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+invalid_updates = {'hidden_size': 50}
+
+        else:
+            result = notebook["fetch_task4_results"]()
+            assert len(result) == 10 * len(seeds)
+            assert "Missing or failed" not in capsys.readouterr().out
+    
+    
+    @pytest.mark.parametrize("invalid_updates", [
+        {"value": 999}, {"seed": 999}, {"activity_lr": 0.5},
+        {"hidden_size": 50}, {"activity_optimizer": "adam"}, {"n_train_iters": 2},
+    ])
+    def test_api_excludes_runs_outside_the_controlled_comparison(notebook, invalid_updates):
+>       valid = api_run(notebook, value=1, run_id="correct-baseline")
+E       AssertionError: assert ['correct-bas...g-comparison'] == ['correct-baseline']
+E         
+E         Left contains one more item: 'wrong-comparison'
+E         Use -v to get more diff
+
+/notebooks/tests/test_pc_in_jax_task45.py:632: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214619-6af134
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+_________________________________________ test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates4] __________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+invalid_updates = {'activity_optimizer': 'adam'}
+
+        else:
+            result = notebook["fetch_task4_results"]()
+            assert len(result) == 10 * len(seeds)
+            assert "Missing or failed" not in capsys.readouterr().out
+    
+    
+    @pytest.mark.parametrize("invalid_updates", [
+        {"value": 999}, {"seed": 999}, {"activity_lr": 0.5},
+        {"hidden_size": 50}, {"activity_optimizer": "adam"}, {"n_train_iters": 2},
+    ])
+    def test_api_excludes_runs_outside_the_controlled_comparison(notebook, invalid_updates):
+>       valid = api_run(notebook, value=1, run_id="correct-baseline")
+E       AssertionError: assert ['correct-bas...g-comparison'] == ['correct-baseline']
+E         
+E         Left contains one more item: 'wrong-comparison'
+E         Use -v to get more diff
+
+/notebooks/tests/test_pc_in_jax_task45.py:632: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214619-ce3186
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+_________________________________________ test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates5] __________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+invalid_updates = {'n_train_iters': 2}
+
+        else:
+            result = notebook["fetch_task4_results"]()
+            assert len(result) == 10 * len(seeds)
+            assert "Missing or failed" not in capsys.readouterr().out
+    
+    
+    @pytest.mark.parametrize("invalid_updates", [
+        {"value": 999}, {"seed": 999}, {"activity_lr": 0.5},
+        {"hidden_size": 50}, {"activity_optimizer": "adam"}, {"n_train_iters": 2},
+    ])
+    def test_api_excludes_runs_outside_the_controlled_comparison(notebook, invalid_updates):
+>       valid = api_run(notebook, value=1, run_id="correct-baseline")
+E       AssertionError: assert ['correct-bas...g-comparison'] == ['correct-baseline']
+E         
+E         Left contains one more item: 'wrong-comparison'
+E         Use -v to get more diff
+
+/notebooks/tests/test_pc_in_jax_task45.py:632: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214620-25f98d
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+__________________________________________________ test_api_invalid_accuracy_does_not_contaminate_plots[nan] __________________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+bad_accuracy = nan
+
+            invalid.config["inference_steps" if key == "value" else key] = value
+        fake_wandb(notebook, runs=[invalid, valid])
+        results = notebook["fetch_task4_results"]()
+        assert [row["run_id"] for row in results] == ["correct-baseline"]
+    
+    
+    @pytest.mark.parametrize("bad_accuracy", [np.nan, np.inf, -np.inf, -0.1, 100.1, "invalid"])
+>   def test_api_invalid_accuracy_does_not_contaminate_plots(notebook, bad_accuracy):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert 'invalid-newest' == 'valid-older'
+E     
+E     - valid-older
+E     + invalid-newest
+
+/notebooks/tests/test_pc_in_jax_task45.py:642: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214621-bc546b
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 5, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+__________________________________________________ test_api_invalid_accuracy_does_not_contaminate_plots[inf] __________________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+bad_accuracy = inf
+
+            invalid.config["inference_steps" if key == "value" else key] = value
+        fake_wandb(notebook, runs=[invalid, valid])
+        results = notebook["fetch_task4_results"]()
+        assert [row["run_id"] for row in results] == ["correct-baseline"]
+    
+    
+    @pytest.mark.parametrize("bad_accuracy", [np.nan, np.inf, -np.inf, -0.1, 100.1, "invalid"])
+>   def test_api_invalid_accuracy_does_not_contaminate_plots(notebook, bad_accuracy):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert 'invalid-newest' == 'valid-older'
+E     
+E     - valid-older
+E     + invalid-newest
+
+/notebooks/tests/test_pc_in_jax_task45.py:642: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214623-b001fd
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 5, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+_________________________________________________ test_api_invalid_accuracy_does_not_contaminate_plots[-inf] __________________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+bad_accuracy = -inf
+
+            invalid.config["inference_steps" if key == "value" else key] = value
+        fake_wandb(notebook, runs=[invalid, valid])
+        results = notebook["fetch_task4_results"]()
+        assert [row["run_id"] for row in results] == ["correct-baseline"]
+    
+    
+    @pytest.mark.parametrize("bad_accuracy", [np.nan, np.inf, -np.inf, -0.1, 100.1, "invalid"])
+>   def test_api_invalid_accuracy_does_not_contaminate_plots(notebook, bad_accuracy):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert 'invalid-newest' == 'valid-older'
+E     
+E     - valid-older
+E     + invalid-newest
+
+/notebooks/tests/test_pc_in_jax_task45.py:642: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214624-08e0b7
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 5, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+_________________________________________________ test_api_invalid_accuracy_does_not_contaminate_plots[-0.1] __________________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+bad_accuracy = -0.1
+
+            invalid.config["inference_steps" if key == "value" else key] = value
+        fake_wandb(notebook, runs=[invalid, valid])
+        results = notebook["fetch_task4_results"]()
+        assert [row["run_id"] for row in results] == ["correct-baseline"]
+    
+    
+    @pytest.mark.parametrize("bad_accuracy", [np.nan, np.inf, -np.inf, -0.1, 100.1, "invalid"])
+>   def test_api_invalid_accuracy_does_not_contaminate_plots(notebook, bad_accuracy):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert 'invalid-newest' == 'valid-older'
+E     
+E     - valid-older
+E     + invalid-newest
+
+/notebooks/tests/test_pc_in_jax_task45.py:642: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214624-aee014
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 5, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+_________________________________________________ test_api_invalid_accuracy_does_not_contaminate_plots[100.1] _________________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+bad_accuracy = 100.1
+
+            invalid.config["inference_steps" if key == "value" else key] = value
+        fake_wandb(notebook, runs=[invalid, valid])
+        results = notebook["fetch_task4_results"]()
+        assert [row["run_id"] for row in results] == ["correct-baseline"]
+    
+    
+    @pytest.mark.parametrize("bad_accuracy", [np.nan, np.inf, -np.inf, -0.1, 100.1, "invalid"])
+>   def test_api_invalid_accuracy_does_not_contaminate_plots(notebook, bad_accuracy):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert 'invalid-newest' == 'valid-older'
+E     
+E     - valid-older
+E     + invalid-newest
+
+/notebooks/tests/test_pc_in_jax_task45.py:642: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214625-30250f
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 5, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+________________________________________________ test_api_invalid_accuracy_does_not_contaminate_plots[invalid] ________________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+bad_accuracy = 'invalid'
+
+>   ???
+
+/notebooks/tests/test_pc_in_jax_task45.py:640: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def fetch_task4_results(*, entity=None, project=None, group=None):
+        api = wandb.Api()
+        entity = entity or WANDB_ENTITY or api.default_entity
+        if not entity:
+            raise ValueError("Set WANDB_ENTITY to the username or team owning the project.")
+        runs = api.runs(
+            f"{entity}/{project or WANDB_PROJECT}",
+            filters={
+                "group": group or TASK4_GROUP,
+                "state": "finished",
+                "config.n_train_iters": 1000,
+            },
+            order="-created_at",
+        )
+        newest_results = {}
+        for run in runs:
+            config = run.config
+            parameter = config.get("sweep_parameter")
+            accuracy = run.summary.get("test/accuracy_at_1000")
+            if parameter not in TASK4_SWEEPS or accuracy is None:
+                continue
+            if run.summary.get("train/iterations_completed") != 1000:
+                continue
+            key = (parameter, config[parameter], config["seed"])
+            newest_results.setdefault(key, {
+                "sweep_parameter": parameter,
+                "value": config[parameter],
+                "seed": config["seed"],
+>               "test_accuracy": float(accuracy),
+                                 ^^^^^^^^^^^^^^^
+                "runtime_seconds": run.summary.get("runtime/seconds"),
+                "run_id": run.id,
+            })
+E           ValueError: could not convert string to float: 'invalid'
+
+/notebooks/test-results/pc_in_jax_task45/task_cells/task_5_cell_60.py:32: ValueError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214626-7ccf13
+___________________________________________ test_api_incomplete_config_is_ignored_without_losing_healthy_runs[seed] ___________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+missing = 'seed'
+
+        results = notebook["fetch_task4_results"]()
+        assert len(results) == 1
+        assert results[0]["run_id"] == "valid-older"
+        assert results[0]["test_accuracy"] == 0.0
+    
+    
+    @pytest.mark.parametrize("missing", ["seed", "inference_steps", "activity_lr"])
+>   def test_api_incomplete_config_is_ignored_without_losing_healthy_runs(notebook, missing):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/notebooks/tests/test_pc_in_jax_task45.py:653: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def fetch_task4_results(*, entity=None, project=None, group=None):
+        api = wandb.Api()
+        entity = entity or WANDB_ENTITY or api.default_entity
+        if not entity:
+            raise ValueError("Set WANDB_ENTITY to the username or team owning the project.")
+        runs = api.runs(
+            f"{entity}/{project or WANDB_PROJECT}",
+            filters={
+                "group": group or TASK4_GROUP,
+                "state": "finished",
+                "config.n_train_iters": 1000,
+            },
+            order="-created_at",
+        )
+        newest_results = {}
+        for run in runs:
+            config = run.config
+            parameter = config.get("sweep_parameter")
+            accuracy = run.summary.get("test/accuracy_at_1000")
+            if parameter not in TASK4_SWEEPS or accuracy is None:
+                continue
+            if run.summary.get("train/iterations_completed") != 1000:
+                continue
+>           key = (parameter, config[parameter], config["seed"])
+                                                 ^^^^^^^^^^^^^^
+E           KeyError: 'seed'
+
+/notebooks/test-results/pc_in_jax_task45/task_cells/task_5_cell_60.py:27: KeyError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214626-3688de
+_____________________________________ test_api_incomplete_config_is_ignored_without_losing_healthy_runs[inference_steps] ______________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+missing = 'inference_steps'
+
+        results = notebook["fetch_task4_results"]()
+        assert len(results) == 1
+        assert results[0]["run_id"] == "valid-older"
+        assert results[0]["test_accuracy"] == 0.0
+    
+    
+    @pytest.mark.parametrize("missing", ["seed", "inference_steps", "activity_lr"])
+>   def test_api_incomplete_config_is_ignored_without_losing_healthy_runs(notebook, missing):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/notebooks/tests/test_pc_in_jax_task45.py:653: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def fetch_task4_results(*, entity=None, project=None, group=None):
+        api = wandb.Api()
+        entity = entity or WANDB_ENTITY or api.default_entity
+        if not entity:
+            raise ValueError("Set WANDB_ENTITY to the username or team owning the project.")
+        runs = api.runs(
+            f"{entity}/{project or WANDB_PROJECT}",
+            filters={
+                "group": group or TASK4_GROUP,
+                "state": "finished",
+                "config.n_train_iters": 1000,
+            },
+            order="-created_at",
+        )
+        newest_results = {}
+        for run in runs:
+            config = run.config
+            parameter = config.get("sweep_parameter")
+            accuracy = run.summary.get("test/accuracy_at_1000")
+            if parameter not in TASK4_SWEEPS or accuracy is None:
+                continue
+            if run.summary.get("train/iterations_completed") != 1000:
+                continue
+>           key = (parameter, config[parameter], config["seed"])
+                              ^^^^^^^^^^^^^^^^^
+E           KeyError: 'inference_steps'
+
+/notebooks/test-results/pc_in_jax_task45/task_cells/task_5_cell_60.py:27: KeyError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214627-7d594e
+_______________________________________ test_api_incomplete_config_is_ignored_without_losing_healthy_runs[activity_lr] ________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+missing = 'activity_lr'
+
+        results = notebook["fetch_task4_results"]()
+        assert len(results) == 1
+        assert results[0]["run_id"] == "valid-older"
+        assert results[0]["test_accuracy"] == 0.0
+    
+    
+    @pytest.mark.parametrize("missing", ["seed", "inference_steps", "activity_lr"])
+    def test_api_incomplete_config_is_ignored_without_losing_healthy_runs(notebook, missing):
+>       invalid = api_run(notebook, value=5)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert 2 == 1
+E        +  where 2 = len([{'run_id': 'healthy', 'runtime_seconds': None, 'seed': 42, 'sweep_parameter': 'inference_steps', ...}, {'run_id': 'api-run', 'runtime_seconds': 12.5, 'seed': 42, 'sweep_parameter': 'inference_steps', ...}])
+
+/notebooks/tests/test_pc_in_jax_task45.py:654: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214628-2e2b12
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Missing or failed (parameter, value, seed): [('activity_lr', 0.001, 42), ('activity_lr', 0.01, 42), ('activity_lr', 0.1, 42), ('activity_lr', 0.5, 42), ('activity_lr', 1.0, 42), ('inference_steps', 20, 42), ('inference_steps', 50, 42), ('inference_steps', 100, 42)]
+___________________________________________ test_real_thousand_update_experiment_learns_and_finishes_exactly[adam] ____________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+optimizer = 'adam'
+
+    biases = [np.asarray(layer.layers[1].bias, dtype=np.float64) for layer in model.layers]
+    moments = [np.zeros_like(array) for array in activities[:-1]]
+    variances = [np.zeros_like(array) for array in activities[:-1]]
+    
+    def residuals():
+        errors = []
+        for index, (weight, bias) in enumerate(zip(weights, biases)):
+            previous = inputs if index == 0 else np.tanh(activities[index - 1])
+            target = labels if index == len(weights) - 1 else activities[index]
+>           errors.append(target - (previous @ weight.T + bias))
+E           assert 0.02675051987171173 < 0.024717137217521667
+
+/notebooks/tests/test_pc_in_jax_task45.py:798: AssertionError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214833-a655fe
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Train iter 333, train energy=0.0247, avg test accuracy=100.00%
+Train iter 666, train energy=0.0228, avg test accuracy=100.00%
+Train iter 999, train energy=0.0267, avg test accuracy=100.00%
+Train iter 1000, train energy=0.0268, avg test accuracy=100.00%
+__________________________________________________ test_real_wandb_offline_smoke_flushes_metrics_and_summary __________________________________________________
+
+notebook = {'ACTIVITY_LR': 0.1, 'BATCH_SIZE': 64, 'Callable': typing.Callable, 'DataLoader': <class 'torch.utils.data.dataloader.DataLoader'>, ...}
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_real_wandb_offline_smoke_0')
+
+    batch_size = int(rng.integers(1, 8))
+    model = make_model(notebook, seed=seed, n_layers=n_layers,
+                       input_size=input_size, hidden_size=hidden_size,
+                       output_size=output_size)
+    model = jax.tree_util.tree_map(lambda leaf: leaf * 0.3 if eqx.is_array(leaf) else leaf, model)
+    inputs = rng.normal(size=(batch_size, input_size)).astype(np.float32)
+    labels = np.eye(output_size, dtype=np.float32)[rng.integers(0, output_size, size=batch_size)]
+    steps = int(rng.choice([1, 5, 20]))
+    activity_lr = float(rng.choice([0.01, 0.1, 0.5]))
+    oracle = numpy_settling(model, inputs, labels, activation="tanh",
+                            steps=steps, activity_lr=activity_lr)
+    snapshot = array_snapshot(model)
+    p_optim = optax.adam(0.001)
+    p_state = p_optim.init(eqx.filter(model, eqx.is_array))
+    result = notebook["train_step"](model, inputs, labels, p_optim, p_state,
+>                                   optax.sgd(activity_lr), T=steps, record_aux_details=False)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'wandb.sdk.internal.datastore'
+
+/notebooks/tests/test_pc_in_jax_task45.py:854: ModuleNotFoundError
+-------------------------------------------------------------------- Captured stdout setup --------------------------------------------------------------------
+Experiment group: task4-20261009-214912-beaa06
+-------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+Train iter 2, train energy=0.3748, avg test accuracy=50.00%
+====================================================================== warnings summary =======================================================================
+../usr/lib/python3/dist-packages/pyparsing.py:108
+  /usr/lib/python3/dist-packages/pyparsing.py:108: DeprecationWarning: module 'sre_constants' is deprecated
+    import sre_constants
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+------------------------------------------- generated xml file: /notebooks/test-results/pc_in_jax_task45/junit.xml --------------------------------------------
+======================================================================= tests coverage ========================================================================
+_______________________________________________________ coverage: platform linux, python 3.11.7-final-0 _______________________________________________________
+
+Name                                                         Stmts   Miss Branch BrPart   Cover   Missing
+---------------------------------------------------------------------------------------------------------
+test-results/pc_in_jax_task45/support_cells/cell_7.py           20      0      2      0 100.00%
+test-results/pc_in_jax_task45/support_cells/cell_45.py          50      0     24      1  98.65%   40->73
+test-results/pc_in_jax_task45/task_cells/task_4_cell_51.py      15      0      6      0 100.00%
+test-results/pc_in_jax_task45/task_cells/task_5_cell_54.py      22      0      2      0 100.00%
+test-results/pc_in_jax_task45/task_cells/task_5_cell_56.py       2      0      0      0 100.00%
+test-results/pc_in_jax_task45/task_cells/task_5_cell_58.py      16      0      4      0 100.00%
+test-results/pc_in_jax_task45/task_cells/task_5_cell_60.py      53      0     24      0 100.00%
+test-results/pc_in_jax_task45/task_cells/task_5_cell_62.py       0      0      0      0 100.00%
+---------------------------------------------------------------------------------------------------------
+TOTAL                                                          178      0     62      1  99.58%
+Coverage HTML written to dir /notebooks/test-results/pc_in_jax_task45/htmlcov
+Coverage XML written to file /notebooks/test-results/pc_in_jax_task45/coverage.xml
+Coverage JSON written to file /notebooks/test-results/pc_in_jax_task45/coverage.json
+FAIL Required test coverage of 100% not reached. Total coverage: 99.58%
+=================================================================== short test summary info ===================================================================
+ERROR tests/test_pc_in_jax_task45.py::test_train_rejects_unknown_activity_optimizer[] - json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR tests/test_pc_in_jax_task45.py::test_wandb_run_arguments_metrics_summary_and_context_exit[activity_lr-True-2] - json.decoder.JSONDecodeError: Expectin...
+ERROR tests/test_pc_in_jax_task45.py::test_real_experiments_are_reproducible_and_log_final_iteration[0-sgd] - json.decoder.JSONDecodeError: Expecting value:...
+FAILED tests/test_pc_in_jax_task45.py::test_empty_training_loader_raises_instead_of_hanging - Failed: infinite_loader([]) hangs forever instead of rejecting...
+FAILED tests/test_pc_in_jax_task45.py::test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates0] - AssertionError: assert ['correct-bas...g...
+FAILED tests/test_pc_in_jax_task45.py::test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates1] - AssertionError: assert ['correct-bas...g...
+FAILED tests/test_pc_in_jax_task45.py::test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates2] - AssertionError: assert ['correct-bas...g...
+FAILED tests/test_pc_in_jax_task45.py::test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates3] - AssertionError: assert ['correct-bas...g...
+FAILED tests/test_pc_in_jax_task45.py::test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates4] - AssertionError: assert ['correct-bas...g...
+FAILED tests/test_pc_in_jax_task45.py::test_api_excludes_runs_outside_the_controlled_comparison[invalid_updates5] - AssertionError: assert ['correct-bas...g...
+FAILED tests/test_pc_in_jax_task45.py::test_api_invalid_accuracy_does_not_contaminate_plots[nan] - AssertionError: assert 'invalid-newest' == 'valid-older'
+FAILED tests/test_pc_in_jax_task45.py::test_api_invalid_accuracy_does_not_contaminate_plots[inf] - AssertionError: assert 'invalid-newest' == 'valid-older'
+FAILED tests/test_pc_in_jax_task45.py::test_api_invalid_accuracy_does_not_contaminate_plots[-inf] - AssertionError: assert 'invalid-newest' == 'valid-older'
+FAILED tests/test_pc_in_jax_task45.py::test_api_invalid_accuracy_does_not_contaminate_plots[-0.1] - AssertionError: assert 'invalid-newest' == 'valid-older'
+FAILED tests/test_pc_in_jax_task45.py::test_api_invalid_accuracy_does_not_contaminate_plots[100.1] - AssertionError: assert 'invalid-newest' == 'valid-older'
+FAILED tests/test_pc_in_jax_task45.py::test_api_invalid_accuracy_does_not_contaminate_plots[invalid] - ValueError: could not convert string to float: 'invalid'
+FAILED tests/test_pc_in_jax_task45.py::test_api_incomplete_config_is_ignored_without_losing_healthy_runs[seed] - KeyError: 'seed'
+FAILED tests/test_pc_in_jax_task45.py::test_api_incomplete_config_is_ignored_without_losing_healthy_runs[inference_steps] - KeyError: 'inference_steps'
+FAILED tests/test_pc_in_jax_task45.py::test_api_incomplete_config_is_ignored_without_losing_healthy_runs[activity_lr] - AssertionError: assert 2 == 1
+FAILED tests/test_pc_in_jax_task45.py::test_real_thousand_update_experiment_learns_and_finishes_exactly[adam] - assert 0.02675051987171173 < 0.0247171372175...
+FAILED tests/test_pc_in_jax_task45.py::test_real_wandb_offline_smoke_flushes_metrics_and_summary - ModuleNotFoundError: No module named 'wandb.sdk.internal....
+18 failed, 153 passed, 1 warning, 3 errors in 316.41s (0:05:16)

@@ -1,0 +1,61 @@
+--- pc_in_jax.ipynb:cell_45:before
++++ pc_in_jax.ipynb:cell_45:after
+@@ -75,5 +75,9 @@
+ 
+ def infinite_loader(dataloader):
+     while True:
++        yielded = False
+         for batch in dataloader:
++            yielded = True
+             yield batch
++        if not yielded:
++            raise ValueError("The training loader is empty.")
+
+--- pc_in_jax.ipynb:cell_54:before
++++ pc_in_jax.ipynb:cell_54:after
+@@ -37,7 +37,8 @@
+             "train/iterations_completed": result["history"][-1]["train/iteration"],
+             "runtime/seconds": result["runtime_seconds"],
+         })
+-        if config["n_train_iters"] == 1000:
++        if (config["n_train_iters"] == 1000
++                and result["history"][-1]["train/iteration"] == 1000):
+             run.summary["test/accuracy_at_1000"] = result["final_test_accuracy"]
+         result["run_id"] = run.id
+         result["entity"] = run.entity
+
+--- pc_in_jax.ipynb:cell_60:before
++++ pc_in_jax.ipynb:cell_60:after
+@@ -23,6 +23,20 @@
+         if parameter not in TASK4_SWEEPS or accuracy is None:
+             continue
+         if run.summary.get("train/iterations_completed") != 1000:
++            continue
++        # Keep each comparison at the configured baseline and seed set.
++        if (config.get(parameter) not in TASK4_SWEEPS[parameter]
++                or config.get("seed") not in TASK4_SEEDS):
++            continue
++        if any(config.get(name) != value
++               for name, value in TASK4_BASE_CONFIG.items()
++               if name not in ("seed", parameter)):
++            continue
++        try:
++            accuracy = float(accuracy)
++        except (TypeError, ValueError):
++            continue
++        if not np.isfinite(accuracy) or not 0.0 <= accuracy <= 100.0:
+             continue
+         key = (parameter, config[parameter], config["seed"])
+         newest_results.setdefault(key, {
+
+--- pc_in_jax.ipynb:cell_51:before
++++ pc_in_jax.ipynb:cell_51:after
+@@ -59,6 +59,8 @@
+         metrics_callback=metrics_callback,
+         return_history=True,
+     )
++    if not history or history[-1]["train/iteration"] != config["n_train_iters"]:
++        raise ValueError("Training did not complete the requested number of iterations.")
+     return {
+         "config": dict(config),
+         "history": history,
