@@ -1,8 +1,0 @@
-Train iter 50, train energy=0.1653, avg test accuracy=85.92%
-Train iter 100, train energy=0.1205, avg test accuracy=89.82%
-Train iter 150, train energy=0.0961, avg test accuracy=90.68%
-Train iter 200, train energy=0.0651, avg test accuracy=92.34%
-Train iter 250, train energy=0.0889, avg test accuracy=93.41%
-Train iter 300, train energy=0.0700, avg test accuracy=93.20%
-Train iter 350, train energy=0.0717, avg test accuracy=93.45%
-Train iter 400, train energy=0.0687, avg test accuracy=94.52%
