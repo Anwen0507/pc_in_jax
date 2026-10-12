@@ -25,6 +25,7 @@ def main():
     return pytest.main([
         "-p", "pytest_cov.plugin",
         *map(str, sorted((ROOT / "tests").glob("test_pc_in_jax_task45*.py"))),
+        str(ROOT / "tests" / "test_pc_in_jax_activity_optimizers.py"),
         "-ra",
         "--cov=" + str(TASK_SOURCES),
         "--cov=" + str(SUPPORT_SOURCES),

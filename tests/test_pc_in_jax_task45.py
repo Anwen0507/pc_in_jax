@@ -148,12 +148,12 @@ def sample_result(config, *, completed=None, accuracy=88.0):
 
 def test_all_section_cells_are_extracted_verbatim():
     selected = selected_cells()
-    assert [task for task, _ in selected.values()] == [4, 5, 5, 5, 5, 5]
+    assert [task for task, _ in selected.values()] == [4] + [5] * 8
     paths = extract_cells()
     for index, (_, source) in selected.items():
         assert paths[index].read_text() == source
-    assert "# for activity_optimizer" in next(
-        source for _, source in selected.values() if "# for activity_optimizer" in source)
+    assert any("def activity_optimizer_configs(" in source
+               for _, source in selected.values())
 
 
 def test_task4_default_grid_and_baseline_match_instructions(notebook):
@@ -784,7 +784,8 @@ def test_complete_api_and_plot_cell_executes_verbatim(notebook, capsys):
     assert len(notebook["task4_api_results"]) == 10
     assert isinstance(notebook["task4_figure"], plt.Figure)
     assert capsys.readouterr().out.count("'test_accuracy': 85.0") == 10
-    execute_cell(cell_with("# for activity_optimizer"), notebook)
+    execute_cell(cell_with("def activity_optimizer_configs("), notebook)
+    assert len(list(notebook["activity_optimizer_configs"]())) == 6
 
 
 @pytest.mark.parametrize("steps", [1, 5, 20, 50, 100])
