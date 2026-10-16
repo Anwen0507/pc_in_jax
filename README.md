@@ -9,6 +9,6 @@
 # Full WandB Runs and Plot for Question 6
 
 <p float="left">
-  <img src="Task4&255_W&25B_Chart.png" width="49%" />
+  <img src="Task4&amp;5_W&amp;B_Chart.png" width="49%" />
   <img src="per_layer_energies.png" width="49%" />
 </p>
