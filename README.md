@@ -8,4 +8,7 @@
 
 # Full WandB Runs and Plot for Question 6
 
-![](Task4&5_W&B_Chart.png) ![](per_layer_energies.png)
+<p float="left">
+  <img src="Task4&255_W&25B_Chart.png" width="49%" />
+  <img src="per_layer_energies.png" width="49%" />
+</p>
