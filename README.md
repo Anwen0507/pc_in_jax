@@ -6,6 +6,6 @@
   
 ![](task4_wandb_accuracy.png)
 
-# Full WandB Runs
+# Full WandB Runs and Plot for Question 6
 
-![](Task4&5_W&B_Chart.png)
+![](Task4&5_W&B_Chart.png) ![](per_layer_energies.png)
